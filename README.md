@@ -2,7 +2,7 @@
 
 ### Quick start
 ##### Step 1: Clone the repository
-##### Step 2: Move all the images to the "./data/happy_images" folder
+##### Step 2: Download([link](https://drive.google.com/drive/folders/1YZj1F3MhD7kdyc2LBm4YZYPZK1giAIk2?usp=sharing)) and move all the images to the "./data/happy_images" folder
 ##### Step 3: Download([link](https://drive.google.com/drive/folders/1VSEmSSFgvHCBzf9MnyICY4lE80eUAdDA?usp=sharing)) and move the pretrained weights to "checkpoint" folder
 
 Now you are ready,
