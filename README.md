@@ -19,8 +19,9 @@ python test.py
 ### Data preprocessing:
 #### File: get_loader.py
   At first, I tried to train the model with raw input images, but the resulting accuracy is not ideal. Therefore, I tried to extract import features of the images(eye and mouth).
-  1) Resized original images are feeded to Open CV Haarcascades pretrained model to extract the images of eye and mouth
-  2) Created a custom dataset to load the data as tuple of (face, eye, mouth, target) tensors.
+  1) Resized original images are feeded to Open CV Haarcascades pretrained model to extract the images of eye and mouth.
+  2) Applied data augmentation to the images(face, eye, mouth)
+  3) Created a custom dataset to load the data as tuple of (face, eye, mouth, target) tensors.
 ![Alt text](./bin/get_loader.jpg)
 
 ### Model Architecture
