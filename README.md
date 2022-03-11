@@ -28,7 +28,7 @@ python test.py
   At first, I tried using a single pretrained model, but the F1-score for negative smile is not ideal. Therefore I ensembled feature vectors extracted from 3 different pretrained models and feed it to the training loop.
   1) Each model trains 3 images(face, eye, mouth) separately to get the feature vector of shape batch_size x hidden_size.
   2) Then the feature vectors are concatenated and feeded to linear layer to get the vector of shape batch_size x hidden_size
-  3) Vectors from 3 different models are concatenated and feeded to a linear layer to finally get the output vector of shape batch_size x 3
+  3) Vectors from 3 different models are again concatenated and feeded to a linear layer to finally get the output vector of shape batch_size x 3
   4) Pretrain models used: ResNet50, DenseNet201, AlexNet
   5) Loss function used: Cross Entropy Loss
   6) Optimizer used: Adam Optimizer
