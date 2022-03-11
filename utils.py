@@ -48,7 +48,7 @@ def score(model, criterion, loader, device):
     
     print(f"Test Loss: {np.mean(losses)}, Test f1: {np.mean(f1scores)}")
 
-def save_checkpoint(state, filename="checkpoint.pth.tar"):
+def save_checkpoint(state, filename="new_checkpoint.pth.tar"):
     print("=> Saving checkpoint")
     torch.save(state, filename)
 

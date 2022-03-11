@@ -17,9 +17,9 @@ def load():
         normalize
     ])
 
-    annotation_file = "./data/data/train.csv"
+    annotation_file = "./data/train.csv"
 
-    root_folder = "./data/data/happy_images/happy_images"
+    root_folder = "./data/happy_images"
 
     test_loader, _ = get_loader(root_folder, annotation_file, transform)
 
@@ -40,7 +40,7 @@ if __name__ == "__main__":
     criterion = nn.CrossEntropyLoss()
     optimizer = optim.Adam(model.parameters(), lr=learning_rate)
 
-    load_checkpoint(torch.load("checkpoint/checkpoint_40_epoch.pth.tar"), model, optimizer)
+    load_checkpoint(torch.load("checkpoint/checkpoint.pth.tar"), model, optimizer)
 
     model.eval()
     with torch.no_grad():

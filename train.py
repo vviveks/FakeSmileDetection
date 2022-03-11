@@ -32,11 +32,11 @@ def load():
     }
 
     annotation_file = {
-        'train': "./data/data/train.csv",
-        'test': "./data/data/test.csv"
+        'train': "./data/train.csv",
+        'test': "./data/test.csv"
     }
 
-    root_folder = "./data/data/happy_images/happy_images"
+    root_folder = "./data/happy_images"
 
     train_loader, _ = get_loader(root_folder, annotation_file['train'], data_transforms['train'])
     test_loader, _ = get_loader(root_folder, annotation_file['test'], data_transforms['test'])
@@ -55,7 +55,7 @@ def train():
     hidden_size = 64
     learning_rate = 0.001
     num_classes = 3
-    num_epochs = 20
+    num_epochs = 40
 
     # Initialize model, loss and optim
     model = SmileClassifier(hidden_size, num_classes).to(device)
@@ -63,10 +63,10 @@ def train():
     optimizer = optim.Adam(model.parameters(), lr=learning_rate)
 
     if load_model:
-        load_checkpoint(torch.load("checkpoint.pth.tar"), model, optimizer)
+        load_checkpoint(torch.load("checkpoint/checkpoint.pth.tar"), model, optimizer)
 
     for epoch in range(num_epochs):
-        print(f"[Epoch {epoch+20} / {num_epochs+20}]")
+        print(f"[Epoch {epoch} / {num_epochs}]")
 
         if save_model:
             checkpoint = {
