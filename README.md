@@ -38,4 +38,5 @@ python test.py
 ### Evaluation Metrics
 After running the model to 40 epochs, this is the classification report.
 Class 0 - Negative smile, Class 1 - Positive smile, Class 2 - Not smile
+
 ![Alt text](./bin/Report.png)
